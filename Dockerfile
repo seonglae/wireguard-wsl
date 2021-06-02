@@ -7,9 +7,13 @@ RUN apt install build-essential libncurses5-dev libssl-dev bison flex libelf-dev
 RUN git clone https://github.com/microsoft/WSL2-Linux-Kernel -b `uname -r` --single-branch
 
 RUN cd WSL2-Linux-Kernel  && \
-  zcat /proc/config.gz > .config  && \
-  make -j  && \
-  sudo make modules_install
+  zcat /proc/config.gz > .config
+
+RUN cd WSL2-Linux-Kernel  && \
+  make -j
+
+RUN cd WSL2-Linux-Kernel  && \
+  make modules_install
 
 RUN cd /lib/modules  && \
   sudo mv /lib/modules/`uname -r`+ /lib/modules/`uname -r`
