@@ -16,7 +16,7 @@ RUN cd WSL2-Linux-Kernel  && \
   make modules_install
 
 RUN cd /lib/modules  && \
-  mv /lib/modules/`uname -r`+ /lib/modules/`uname -r`
+  ln -s /lib/modules/`uname -r`+ /lib/modules/`uname -r`
 
 RUN cd WSL2-Linux-Kernel  && \
   make bindeb-pkg  && \
