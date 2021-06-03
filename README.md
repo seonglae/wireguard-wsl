@@ -1,4 +1,4 @@
-Docker Wireguard for Windows WSL
+# Docker Wireguard for Windows WSL
 
 **This project is not working yet**
 
