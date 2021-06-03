@@ -3,7 +3,7 @@
 **This project is not working yet**
 
 ```
-docker build . --tag wireguard-wsl
+docker build . --tag ghcr.io/seonglae/wireguard-wsl
 ```
 
 
